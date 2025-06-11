@@ -12,7 +12,7 @@ def unzip_model(zip_path):
             zip_ref.extractall(os.path.dirname(zip_path))
     return out_path
 
-def get_model(name, weight_path, is_zipped=False, num_classes=5):
+def get_model(name, weight_path, is_zipped=True, num_classes=5):
     if is_zipped:
         weight_path = unzip_model(weight_path)
 
